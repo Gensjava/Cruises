@@ -34,7 +34,7 @@ public class Cruise {
         mListLeg = listLeg;
     }
 
-    //проверка показывать Origin круиза
+    //проверка, показывать или нет Origin круиза
     //Origin круиза - это Origin 1-го перехода
     //boolean cOrigin true - показываем false - не покакзываем.
 
@@ -52,7 +52,7 @@ public class Cruise {
         return cOrigin;
     }
 
-    //проверка показывать Destination круиза
+    //проверка, показывать или нет Destination круиза
     //Показывается только если существует Leg без Destination.
     //boolean cDestination true - показываем false - не покакзываем.
 
@@ -72,7 +72,7 @@ public class Cruise {
         return cDestination;
     }
 
-    //проверка показывать Destination круиза
+    //проверка, показывать или нет AddDestination круиза
     //Показывается только если во всех Leg(s) Destination задан.
     //boolean cAddDestination true - показываем false - не покакзываем.
 
