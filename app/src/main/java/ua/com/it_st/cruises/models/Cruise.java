@@ -60,9 +60,7 @@ public class Cruise {
         boolean cDestination = false;
 
         if (mListLeg != null){
-            if (mListLeg.size() == 0){
-                cDestination = true;
-            }else {
+            if (mListLeg.size() != 0){
                 for (byte x = 0; x < mListLeg.size(); x++){
                     final Leg leg = mListLeg.get(x);
                     if (leg != null){
