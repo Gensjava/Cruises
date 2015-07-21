@@ -19,10 +19,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        List<Leg> mListLeg = new ArrayList();
-
-        Cruise cruise = new Cruise(mListLeg, false);
+//
+//        List<Leg> mListLeg = new ArrayList();
+//        Location sDestination = null;
+//        Leg leg = new Leg();
+//        leg.onSetDestination()
+//        mListLeg.add(Leg.onAddDestination(sDestination));
+//
+//        Cruise cruise = new Cruise(mListLeg, false);
     }
 
     @Override

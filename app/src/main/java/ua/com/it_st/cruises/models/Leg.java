@@ -21,6 +21,7 @@ public class Leg {
     }
 
     public Leg(final Location sDestination) {
+
     }
 
     public Location getOrigin() {
@@ -65,4 +66,6 @@ public class Leg {
     public void setModified(final boolean modified) {
         mModified = modified;
     }
+
+
 }
