@@ -128,6 +128,10 @@ public class Cruise {
     //Location sDestination координаты
 
     public Leg onAddDestination (Location sDestination) {
-        return new Leg(sDestination);
+        if (sDestination != null){
+            return new Leg(sDestination);
+        }
+
+        return null;
     }
 }
