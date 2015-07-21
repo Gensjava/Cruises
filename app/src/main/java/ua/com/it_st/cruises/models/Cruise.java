@@ -63,9 +63,14 @@ public class Cruise {
             if (mListLeg.size() == 0){
                 cDestination = true;
             }else {
-                final Leg leg = mListLeg.get(0);
-                if (leg != null){
-                    cDestination = leg.getDestination() == null;
+                for (byte x = 0; x < mListLeg.size(); x++){
+                    final Leg leg = mListLeg.get(x);
+                    if (leg != null){
+                        cDestination = leg.getDestination() == null;
+                        if (!cDestination){
+                            break;
+                        }
+                    }
                 }
             }
         }
