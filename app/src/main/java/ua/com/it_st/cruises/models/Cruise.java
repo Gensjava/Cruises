@@ -56,14 +56,16 @@ public class Cruise {
     //Origin круиза - это Origin 1-го перехода
     //Location sOrigin координаты  Origin круиза.
 
-    public void onSetOriginCruise(Location sOrigin) {
+    public Leg onSetOriginCruise(Location sOrigin) {
 
-        if (mListLeg != null){
-            if (mListLeg.size() != 0){
-                final Leg leg = mListLeg.get(0);
+        Leg leg = null;
+        if (mListLeg != null) {
+            if (mListLeg.size() != 0) {
+                leg = mListLeg.get(0);
                 leg.setOrigin(sOrigin);
             }
         }
+        return leg;
     }
 
     //проверка, показывать или нет Destination круиза
@@ -93,11 +95,12 @@ public class Cruise {
     //Leg leg переход в котором Destination = null.
     //Location sDestination кооррдинаты
 
-    public void onSetDestination(Leg leg, Location sDestination) {
+    public Leg onSetDestination(Leg leg, Location sDestination) {
 
         if (leg != null){
             leg.setDestination(sDestination);
         }
+        return leg;
     }
 
     //проверка, показывать или нет AddDestination круиза
@@ -121,7 +124,10 @@ public class Cruise {
         return cAddDestination;
     }
 
-    public void onSetAddDestination (Location sDestination) {
-        Leg leg = new Leg(sDestination);
+    //делаем новый Leg и его Destination
+    //Location sDestination кооррдинаты
+
+    public Leg onAddDestination (Location sDestination) {
+        return new Leg(sDestination);
     }
 }
