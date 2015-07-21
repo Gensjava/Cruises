@@ -20,6 +20,9 @@ public class Leg {
         mRoute = route;
     }
 
+    public Leg(final Location sDestination) {
+    }
+
     public Location getOrigin() {
         return mOrigin;
     }

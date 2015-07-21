@@ -38,7 +38,7 @@ public class Cruise {
     //Origin круиза - это Origin 1-го перехода
     //boolean cOrigin true - показываем false - не покакзываем.
 
-    public boolean onCheckSetOrigin() {
+    public boolean onCheckOriginCruise() {
         boolean cOrigin = false;
 
         if (mListLeg != null){
@@ -52,11 +52,25 @@ public class Cruise {
         return cOrigin;
     }
 
+    //делаем запись Origin круиза
+    //Origin круиза - это Origin 1-го перехода
+    //Location sOrigin координаты  Origin круиза.
+
+    public void onSetOriginCruise(Location sOrigin) {
+
+        if (mListLeg != null){
+            if (mListLeg.size() != 0){
+                final Leg leg = mListLeg.get(0);
+                leg.setOrigin(sOrigin);
+            }
+        }
+    }
+
     //проверка, показывать или нет Destination круиза
     //Показывается только если существует Leg без Destination.
     //boolean cDestination true - показываем false - не покакзываем.
 
-    public boolean onCheckSetDestination () {
+    public boolean onCheckDestination () {
         boolean cDestination = false;
 
         if (mListLeg != null){
@@ -73,6 +87,17 @@ public class Cruise {
             }
         }
         return cDestination;
+    }
+
+    //делаем запись Destination
+    //Leg leg переход в котором Destination = null.
+    //Location sDestination кооррдинаты
+
+    public void onSetDestination(Leg leg, Location sDestination) {
+
+        if (leg != null){
+            leg.setDestination(sDestination);
+        }
     }
 
     //проверка, показывать или нет AddDestination круиза
@@ -94,5 +119,9 @@ public class Cruise {
             }
         }
         return cAddDestination;
+    }
+
+    public void onSetAddDestination (Location sDestination) {
+        Leg leg = new Leg(sDestination);
     }
 }

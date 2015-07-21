@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ua.com.it_st.cruises.models.Cruise;
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        List<Leg> mListLeg = new ArrayList();
+
+        Cruise cruise = new Cruise(mListLeg, false);
     }
 
     @Override
