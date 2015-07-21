@@ -131,7 +131,6 @@ public class Cruise {
         if (sDestination != null){
             return new Leg(sDestination);
         }
-
         return null;
     }
 }
