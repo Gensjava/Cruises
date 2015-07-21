@@ -93,7 +93,7 @@ public class Cruise {
 
     //делаем запись Destination
     //Leg leg переход в котором Destination = null.
-    //Location sDestination кооррдинаты
+    //Location sDestination координаты
 
     public Leg onSetDestination(Leg leg, Location sDestination) {
 
@@ -125,7 +125,7 @@ public class Cruise {
     }
 
     //делаем новый Leg и его Destination
-    //Location sDestination кооррдинаты
+    //Location sDestination координаты
 
     public Leg onAddDestination (Location sDestination) {
         return new Leg(sDestination);
